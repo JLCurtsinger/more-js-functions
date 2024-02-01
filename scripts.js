@@ -117,22 +117,26 @@ function calcChange(amount){
 // XXXXXX
 // XXXXXX
 // Convert into a drawBox function
-// if(boxChar === undefined){
-//     boxChar = "X";
-// }
+function drawBox(numRows, numCols, boxChar){
+    if(boxChar === undefined){
+        boxChar = "X";
+    }
+
+    for (let r = 0; r < numRows; r++) {
+        let line = "";
+        for (let c = 0; c < numCols; c++) {
+            line += boxChar;
+        }
+        console.log(line);
+    }
+}
+
 // you could also write the code below to assign the value to the boxChar variable 
 // let boxChar = boxChar || "X";
 
-// for (let r = 0; r < numRows; r++) {
-//     let line = "";
-//     for (let c = 0; c < numCols; c++) {
-//         line += boxChar;
-//     }
-//     console.log(line);
-// }
-
 // call our new function with different arguments
-// TO DO
+drawBox(3,3,"*");
+drawBox(3,3);
 
 
 // ------------------------------------
